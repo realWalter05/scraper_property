@@ -272,17 +272,18 @@ if __name__ == "__main__":
     start = perf_counter()
     requested = []
 
-    with open("requested_properties.txt", "r") as f:
-        for line in f.readlines():
-            requested.append(line.replace("\n", ""))
+    if os.path.exists("requested_properties.txt"):
+        with open("requested_properties.txt", "r") as f:
+            for line in f.readlines():
+                requested.append(line.replace("\n", ""))
 
-    for requested_property in requested:
-        city_properties = CityProperty(requested_property)
-        city_properties.write_csv()
-        print(city_properties)
+        for requested_property in requested:
+            city_properties = CityProperty(requested_property)
+            city_properties.write_csv()
+            print(city_properties)
 
-    end = perf_counter()
-    print(f"It took: {end - start} seconds :/")
-    print(f"which is {(end - start) / 60} minutes :)")
-    os.remove("requested_properties.txt")
+        end = perf_counter()
+        print(f"It took: {end - start} seconds :/")
+        print(f"which is {(end - start) / 60} minutes :)")
+        os.remove("requested_properties.txt")
 
