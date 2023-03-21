@@ -273,10 +273,12 @@ if __name__ == "__main__":
     requested = []
 
     if os.path.exists("requested_properties.txt"):
+        print("Operation started...")
         with open("requested_properties.txt", "r") as f:
             for line in f.readlines():
                 requested.append(line.replace("\n", ""))
 
+        os.remove("requested_properties.txt")
         for requested_property in requested:
             city_properties = CityProperty(requested_property)
             city_properties.write_csv()
@@ -285,5 +287,4 @@ if __name__ == "__main__":
         end = perf_counter()
         print(f"It took: {end - start} seconds :/")
         print(f"which is {(end - start) / 60} minutes :)")
-        os.remove("requested_properties.txt")
 

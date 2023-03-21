@@ -3,8 +3,8 @@ class Config(object):
     DEBUG = True
     TESTING = False
 
-    SCRAPER_PATH = "~/"
-    PROPERTY_PATH = "~/scraper_property/"
+    SCRAPER_PATH = "/home/zikavaclav05/"
+    PROPERTY_PATH = "/home/zikavaclav05/taxscraper/tax_venv/bin/scraper_property"
 
 
 class ProductionConfig(Config):
