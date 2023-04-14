@@ -4,7 +4,7 @@ class Config(object):
     TESTING = False
 
     SCRAPER_PATH = "/home/zikavaclav05/"
-    PROPERTY_PATH = "/home/zikavaclav05/taxscraper/tax_venv/bin/scraper_property"
+    PROPERTY_PATH = "/home/zikavaclav05/taxscraper/tax_venv/bin/scraper_property/"
 
 
 class ProductionConfig(Config):
@@ -15,5 +15,5 @@ class ProductionConfig(Config):
 class DevelopmentConfig(Config):
     ENV = "development"
 
-    SCRAPER_PATH = "C:/Users/zikav/dev/python/scraper/"
-    PROPERTY_PATH = "C:/Users/zikav/dev/python/scraper/scraper_property/"
+    SCRAPER_PATH = "/home/walter/Dev/scraper_property"
+    PROPERTY_PATH = "/home/walter/Dev/scraper_property/properties/"

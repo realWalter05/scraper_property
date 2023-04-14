@@ -232,7 +232,7 @@ class CityProperty():
         # Create the csv file
         file_name = f"city{self.city_code}_data" + datetime.now().strftime("%Y%m%d") + ".csv"
         self.file_name = file_name
-        f = open("./scraper_property/" + file_name, 'w')
+        f = open("./properties/" + file_name, 'w')
         writer = csv.writer(f, lineterminator='\n')
 
         # Write header row
